@@ -1,5 +1,4 @@
 import yfinance as yf
-import pandas as pd
 import matplotlib.pyplot as plt
  
 # ── 1. CONFIGURATION ──────────────────────────────────────────────────────────
@@ -44,7 +43,7 @@ print(sell_signals[["Close", "SMA50", "SMA200"]])
  
 # ── 5. PLOT ───────────────────────────────────────────────────────────────────
 plt.figure(figsize=(14, 7))
-plt.plot(df["Close"],  label="AAPL Close Price", alpha=0.5, linewidth=1)
+plt.plot(df["Close"],  label=f"{TICKER} Close Price", alpha=0.5, linewidth=1)
 plt.plot(df["SMA50"],  label="50-Day SMA",  linewidth=1.5)
 plt.plot(df["SMA200"], label="200-Day SMA", linewidth=1.5)
  

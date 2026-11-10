@@ -29,7 +29,7 @@ A Python-based backtesting engine implementing a **Golden Cross / Death Cross** 
 | Sharpe Ratio | 0.63 |
 | Max Drawdown | -43.33% |
 
-> **Note:** Buy & hold outperformed the strategy on AAPL due to its strong long-term uptrend. The strategy is better suited to more volatile or cyclical assets where trend reversals are more frequent. The two whipsaw trades in late 2022 (rapid crossovers in quick succession) were the primary drag on performance.
+> **Note:** Buy & hold outperformed the strategy on AAPL due to its strong long-term uptrend. Trend-following strategies like this are generally expected to do better on cyclical assets with sustained reversals, though that is not tested here. The two whipsaw trades in late 2022 (rapid crossovers in quick succession) were the primary drag on performance.
 
 ---
 
@@ -74,7 +74,7 @@ trading-backtester/
 ## Key Concepts
 
 - Moving average crossover strategy (Golden Cross / Death Cross)
-- API integration for live and historical market data
+- API integration for historical market data
 - Portfolio simulation and trade execution logic
 - Quantitative risk metrics: Sharpe ratio, maximum drawdown
 - Benchmark comparison against buy & hold
