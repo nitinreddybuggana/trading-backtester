@@ -1,6 +1,4 @@
 import yfinance as yf
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
  
@@ -53,7 +51,7 @@ gs  = gridspec.GridSpec(3, 1, height_ratios=[2, 1.5, 1], hspace=0.4)
  
 # ── Chart 1: Price + SMAs ─────────────────────────────────────────────────────
 ax1 = fig.add_subplot(gs[0])
-ax1.plot(df["Close"],  label="AAPL Close Price", alpha=0.5, linewidth=1,   color="steelblue")
+ax1.plot(df["Close"],  label=f"{TICKER} Close Price", alpha=0.5, linewidth=1,   color="steelblue")
 ax1.plot(df["SMA50"],  label="50-Day SMA",        linewidth=1.5,            color="orange")
 ax1.plot(df["SMA200"], label="200-Day SMA",        linewidth=1.5,            color="green")
 ax1.scatter(buy_signals.index,  buy_signals["Close"],  marker="^", color="green", s=120, zorder=5, label="Buy")
@@ -82,6 +80,6 @@ ax3.set_xlabel("Date")
 ax3.legend(loc="lower left", fontsize=8)
 ax3.grid(alpha=0.3)
  
-plt.savefig("phase4_visualisation.png", dpi=150, bbox_inches="tight")
+plt.savefig("visualisation.png", dpi=150, bbox_inches="tight")
 plt.show()
-print("Chart saved to phase4_visualisation.png")
+print("Chart saved to visualisation.png")
